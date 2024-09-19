@@ -1,0 +1,6 @@
+If you have installed linux-gpib user libraries and tools and kernel driver for you adapter then:
+
+autoreconf -i -f
+./configure
+make
+make check
