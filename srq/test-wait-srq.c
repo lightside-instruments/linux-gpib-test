@@ -5,12 +5,19 @@
 
 int main() {
     int ret;
-    int dev;
+    int brd;
     short wait_result;
-    dev=ibdev(0,1,0,T3s,0,0);
+    short is_srq_active;
+    //dev=ibdev(0,1,0,T3s,0,0);
+    brd=ibfind("raspi_gpio_interface");
     wait_result=-1;
+    TestSRQ(brd, &is_srq_active);
+    printf("is_srq_active=%d\n",(int)is_srq_active);
     printf("waiting...\n");
-    WaitSRQ(dev, &wait_result);
+    do {
+        WaitSRQ(brd, &wait_result);
+        printf("%u\n", (unsigned int)wait_result);
+    } while(wait_result==0);
     printf("%u\n", (unsigned int)wait_result);
     assert(wait_result==1 || wait_result==0);
     printf("done\n");

@@ -1,3 +1,9 @@
+linux-gpib-test (1.2) bookworm; urgency=medium
+
+  * Fixed srq tests to use board instead of device functions. To add device functionality tests later.
+
+ -- Vladimir Vassilev <vladimir@lightside-instruments.com>  Fri, 27 Sep 2024 10:35:55 +0200
+
 linux-gpib-test (1.1) bookworm; urgency=medium
 
   * Added missing idn/Makefile.am
