@@ -9,6 +9,8 @@ int main() {
     char buffer[1024];
     short wait_result;
     dev=ibdev(0,1,0,T3s,0,0);
+
+//while(1) {
     ibwrt(dev,"*IDN?\n",6);
     ret=ibrd(dev, (void*)buffer, 1024);
     printf("%d\n",ret);
@@ -16,4 +18,5 @@ int main() {
     assert(ibcnt>0);
     buffer[ibcnt]=0;
     printf("%s\n",buffer);
+//}
 }

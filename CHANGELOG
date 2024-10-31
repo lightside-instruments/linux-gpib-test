@@ -1,3 +1,10 @@
+linux-gpib-test (1.3) bookworm; urgency=medium
+
+  * Changed naming convention for interface adapter now gpib0 is used instead of implementation specific names to facilitate interchangeability
+  * Added srq/test-ibwait-ibrsp testcase for validating srq event followed with ibrsp call
+
+ -- Vladimir Vassilev <vladimir@lightside-instruments.com>  Thu, 31 Oct 2024 14:29:09 +0100
+
 linux-gpib-test (1.2) bookworm; urgency=medium
 
   * Fixed srq tests to use board instead of device functions. To add device functionality tests later.

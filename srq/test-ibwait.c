@@ -11,7 +11,7 @@ int main() {
 
     short wait_result;
 //    dev=ibdev(0,1,0,T3s,0,0);
-    brd=ibfind("raspi_gpio_interface");
+    brd=ibfind("gpib0");
     printf("Setting ibtmo to T10s\n");
     ibtmo(brd,T10s);
     printf("ibsta==0x%08X\n", ibsta);

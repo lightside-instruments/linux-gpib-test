@@ -9,7 +9,7 @@ int main() {
     short wait_result;
     short is_srq_active;
     //dev=ibdev(0,1,0,T3s,0,0);
-    brd=ibfind("raspi_gpio_interface");
+    brd=ibfind("gpib0");
     wait_result=-1;
     TestSRQ(brd, &is_srq_active);
     printf("is_srq_active=%d\n",(int)is_srq_active);
